@@ -2,7 +2,6 @@
 
 <div align="center">
 
-<img src="screenshots/banner.png" width="100%"/>
 
 ### Professional Cricket Scoring & Statistics Application
 
@@ -94,26 +93,6 @@ Whether you're managing a local tournament, club match, corporate event, or week
 * Smooth animations
 * Responsive layouts
 * Optimized performance
-
----
-
-# 📸 Screenshots
-
-<div align="center">
-
-| Home                                          | Live Scoring                                     |
-| --------------------------------------------- | ------------------------------------------------ |
-| <img src="https://drive.google.com/file/d/1roo4NYbp5LMBdb-bmTy9lxJDFxV6Sp3N/view?usp=drive_link" width="320"/> | <img src="https://drive.google.com/file/d/1hecOLDKn3b5U3MfPPTKn5gDVCRE32AHL/view?usp=drive_link" width="320"/> |
-
-| Toss                                          | Leaderboard                                          |
-| -------------------------------------------------- | ---------------------------------------------------- |
-| <img src="https://drive.google.com/file/d/1ZcJUmmJ3KhJz9LuiHsg6pUUqHiDq0NN1/view?usp=drive_link" width="320"/> | <img src="https://drive.google.com/file/d/1CVGQ254ucrhv-33a8QgmvFa7ftSvWZk2/view?usp=drive_link" width="320"/> |
-
-| Overs                                         | ScoreBoard                                          |
-| ------------------------------------------------ | ---------------------------------------------- |
-| <img src="https://drive.google.com/file/d/1U58rv218qTMqxZL26THp7Oy1SvP9fLX2/view?usp=drive_link" width="320"/> | <img src="https://drive.google.com/file/d/1zpY6aQ74xDjEdh3lZdBbGoghjmcPbluN/view?usp=drive_link" width="320"/> |
-
-</div>
 
 ---
 
