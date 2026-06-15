@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#070B1A"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+
+
+        <!-- ✅ Only Toss info here (no duplicate match title) -->
+        <TextView
+            android:id="@+id/tvTossInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toss: ..."
+            android:textSize="15sp"
+            android:textColor="#9FB2FF"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/tvResultInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Result: ..."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#8BFF63"
+            android:visibility="gone"/>
+
+
+
+        <!-- ✅ Man of the Match (visible only for completed match) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#1A2448"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="#0B1230">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/tvMomTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Man of the Match"
+                    android:textStyle="bold"
+                    android:textColor="#00E5FF"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivMomBadge"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="10dp"/>
+
+                <!-- Name -->
+                <TextView
+                    android:id="@+id/tvMomName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textStyle="bold"
+                    android:textColor="#EAF2FF"
+                    android:textSize="16sp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivMomBadge"
+                    app:layout_constraintTop_toBottomOf="@id/tvMomTitle"
+                    android:layout_marginEnd="10dp"/>
+
+                <!-- Details -->
+                <TextView
+                    android:id="@+id/tvMomDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="#A9B6D3"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivMomBadge"
+                    app:layout_constraintTop_toBottomOf="@id/tvMomName"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="10dp"/>
+
+                <!-- ✅ Badge icon on right -->
+                <ImageView
+                    android:id="@+id/ivMomBadge"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/mom"
+                    android:contentDescription="Man of the Match Badge"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <include
+            android:id="@+id/cardInnings1"
+            layout="@layout/view_innings_card"
+            android:layout_marginTop="8dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <include
+            android:id="@+id/cardInnings2"
+            layout="@layout/view_innings_card"
+            android:layout_marginTop="12dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

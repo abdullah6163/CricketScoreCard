@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="#0B152A">
+
+    <TextView
+        android:id="@+id/tvInnTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1st Innings"
+        android:textColor="#25F4FF"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <!-- ✅ Batting / Bowling line (handles long names) -->
+    <TextView
+        android:id="@+id/tvInnBatBowl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dp"
+        android:text="Batting: Team A  |  Bowling: Team B"
+        android:textColor="#A9B6D3"
+        android:textSize="13sp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <!-- ✅ Team shown separately (short / long safe) -->
+    <TextView
+        android:id="@+id/tvInnTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Team A"
+        android:textColor="#EAF2FF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tvInnScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="18-1 (2.0)"
+        android:textColor="#EAF2FF"
+        android:textSize="16sp"
+        android:paddingTop="6dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tvInnCRR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CRR 9.00"
+        android:textColor="#B8C9EA"
+        android:textSize="13sp"
+        android:paddingTop="6dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+</LinearLayout>

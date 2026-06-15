@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#0B1230"
+    app:strokeColor="@color/card2"
+    app:strokeWidth="1dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="0dp"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER (click to expand) -->
+        <LinearLayout
+            android:id="@+id/headerRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvInningsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1st Innings"
+                    android:textColor="#EAF2FF"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvBatBowl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvInningsOvers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Overs: 0.0"
+                    android:textColor="#9FB2FF"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/tvInningsScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/0"
+                    android:textColor="#00E5FF"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvInningsCRR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CRR 0.00"
+                    android:textColor="#9FB2FF"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivDrop"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="10dp"
+                android:src="@android:drawable/arrow_down_float"
+                app:tint="@color/neon_cyan" />
+
+        </LinearLayout>
+
+        <!-- BODY -->
+        <LinearLayout
+            android:id="@+id/bodyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/tvExtras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Extras: 0"
+                android:textColor="#EAF2FF"
+                android:textSize="13sp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- ✅ NEW: Yet to Bat -->
+
+
+            <TextView
+                android:id="@+id/tvBattingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Batting"
+                android:textColor="#9FB2FF"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginBottom="5dp"/>
+
+            <include layout="@layout/header_batsman_table" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBatsmen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+            <TextView
+                android:id="@+id/tvYetToBat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yet to bat: —"
+                android:textColor="#A9B6D3"
+                android:textSize="13sp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvBowlingLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bowling"
+                android:textColor="#9FB2FF"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginBottom="5dp"/>
+
+            <include layout="@layout/header_bowler_table" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBowlers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

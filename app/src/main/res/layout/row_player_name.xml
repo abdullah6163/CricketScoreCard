@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textfield.TextInputLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tilPlayer"
+    style="@style/WL_NeonInput"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:hintEnabled="true">
+
+    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+        android:id="@+id/actName"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#EAF2FF"
+        android:textColorHint="#A9B6D3"
+        android:singleLine="true"/>
+</com.google.android.material.textfield.TextInputLayout>

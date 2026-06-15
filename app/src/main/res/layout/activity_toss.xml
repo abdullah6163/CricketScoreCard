@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#070B16">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tbToss"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#0B1230"
+        app:navigationIcon="@drawable/ic_back"
+        app:titleTextColor="#EAF2FF"
+        app:subtitleTextColor="#A9B6D3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardToss"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:strokeColor="#1A2448"
+        app:strokeWidth="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tbToss"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0B1230"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Use any drawable you already have (example: ic_ball) -->
+            <ImageView
+                android:id="@+id/ivCoin"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/toss"
+                android:contentDescription="Coin"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="12dp"
+                />
+
+            <TextView
+                android:id="@+id/tvTossStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tap to toss"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#EAF2FF"
+                android:gravity="center"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDoToss"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="TAP TO TOSS"
+                android:textColor="#070B16"
+                android:backgroundTint="#00E5FF"
+                app:cornerRadius="16dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp"
+                android:background="#1A2448"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opted to?"
+                android:textColor="#A9B6D3"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbBat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bat"
+                    android:textColor="#EAF2FF"/>
+
+                <RadioButton
+                    android:id="@+id/rbBowl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:text="Bowl"
+                    android:textColor="#EAF2FF"/>
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="14dp"
+                android:text="CONTINUE"
+                android:textColor="#070B16"
+                android:backgroundTint="#8BFF63"
+                app:cornerRadius="18dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

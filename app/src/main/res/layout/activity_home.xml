@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- MAIN CONTENT -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#070B16">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="#0B1230"
+            app:navigationIcon="@drawable/ic_menu_24"
+            app:title="Cricket ScoreCard"
+            app:titleTextColor="#EAF2FF"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieHome"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="18dp"
+            app:lottie_rawRes="@raw/cricket"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateMatch"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:text="CREATE MATCH"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="#070B16"
+            android:backgroundTint="#7CFF6B"
+            app:cornerRadius="18dp"
+            app:layout_constraintTop_toBottomOf="@id/lottieHome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvMatches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matches"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#00E5FF"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@id/btnCreateMatch"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#1A2448"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvMatches"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMatches"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="16dp"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="No matches yet.\nTap CREATE MATCH to start your first game."
+            android:textColor="#A9B6D3"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="18dp"
+            app:layout_constraintTop_toTopOf="@id/rvMatches"
+            app:layout_constraintBottom_toBottomOf="@id/rvMatches"
+            app:layout_constraintStart_toStartOf="@id/rvMatches"
+            app:layout_constraintEnd_toEndOf="@id/rvMatches" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- DRAWER -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#0B1230"
+        app:headerLayout="@layout/nav_header_home"
+        app:menu="@menu/menu_drawer_home"
+        app:itemIconTint="#EAF2FF"
+        app:itemTextColor="#EAF2FF"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ✅ Your existing style (keep) -->
+    <style name="WL_DropdownInput" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">#0F1A3A</item>
+        <item name="boxStrokeColor">#2A3B70</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+
+        <item name="hintTextColor">#B8C0D0</item>
+        <item name="android:textColor">#EAF2FF</item>
+
+        <item name="endIconMode">dropdown_menu</item>
+        <item name="endIconTint">#7CFF6B</item>
+        <item name="startIconTint">#00E5FF</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CircleImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+
+    <style name="ToolbarTitleSmall" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="ToolbarSubtitleSmall" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <!-- ✅ Your existing style (keep) -->
+    <style name="WL_CircleImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- ✅ NEW: Neon input for normal TextInputLayout -->
+    <style name="WL_NeonInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">#0F1A3A</item>
+        <item name="boxStrokeColor">#00E5FF</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+
+        <item name="hintTextColor">#B8C0D0</item>
+        <item name="android:textColorHint">#B8C0D0</item>
+
+        <item name="startIconTint">#00E5FF</item>
+        <item name="endIconTint">#7CFF6B</item>
+    </style>
+
+    <!-- ✅ NEW: Neon input for FilledBox (if you still use FilledBox in other screens) -->
+    <style name="WL_NeonInput_Filled" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">#0F1A3A</item>
+        <item name="boxStrokeColor">#00E5FF</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+
+        <item name="hintTextColor">#B8C0D0</item>
+        <item name="android:textColorHint">#B8C0D0</item>
+
+        <item name="startIconTint">#00E5FF</item>
+        <item name="endIconTint">#7CFF6B</item>
+    </style>
+
+</resources>

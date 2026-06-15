@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#070B16">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#0B1230"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Teams"
+        app:titleTextColor="#EAF2FF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTeams"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="12dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="No teams yet"
+        android:textColor="#A9B6D3"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:padding="18dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/rvTeams"
+        app:layout_constraintBottom_toBottomOf="@id/rvTeams"
+        app:layout_constraintStart_toStartOf="@id/rvTeams"
+        app:layout_constraintEnd_toEndOf="@id/rvTeams"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

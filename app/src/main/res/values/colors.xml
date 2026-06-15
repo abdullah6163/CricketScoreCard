@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#070A12</color>
+    <color name="toolbar">#0B1020</color>
+
+    <color name="card">#0F1730</color>
+    <color name="card2">#1A2447</color>
+
+    <color name="text">#FFFFFF</color>
+    <color name="muted">#B8C0D0</color>
+
+    <color name="neon_lime">#7CFF6B</color>
+    <color name="neon_cyan">#00E5FF</color>
+    <color name="neon_yellow">#FFD600</color>
+</resources>

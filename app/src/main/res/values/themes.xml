@@ -1,0 +1,29 @@
+<resources>
+
+    <style name="Theme.WeekendLegends" parent="Theme.Material3.Dark.NoActionBar">
+
+        <item name="colorPrimary">#7CFF6B</item>
+        <item name="colorSecondary">#00E5FF</item>
+
+        <item name="android:windowBackground">#070A12</item>
+        <item name="android:statusBarColor">#070A12</item>
+        <item name="android:navigationBarColor">#070A12</item>
+
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#B8C0D0</item>
+
+        <!-- ✅ Fix hints globally -->
+        <item name="textInputStyle">@style/WL_TextInput</item>
+    </style>
+
+    <style name="WL_TextInput" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">#0F1838</item>
+        <item name="boxStrokeColor">#1A2448</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="hintTextColor">#B8C0D0</item>
+        <item name="android:textColorHint">#B8C0D0</item>
+        <item name="boxCollapsedPaddingTop">8dp</item>
+    </style>
+
+</resources>
